@@ -2,34 +2,57 @@ var speech;
 
 
 function setup() {
-  createCanvas(400, 400);
   
-  speech = new p5.SpeechRec('en-US', gotSpeech); // speech recognition object (will prompt for mic access)
-  
+  speech = new p5.SpeechRec('en-US', gotSpeech); 
   speech.continuous = true;
-  //speech.interimResults = true;
-  
-  speech.start(); // start listening
+  speech.start();
 
 }
 
 function draw() {
-  background(220);
-  fill(0); // Set the fill color to black
-  textSize(16); // Set the text size
-  textAlign(LEFT); // Align text to the left
-  if (speech.resultString) { // Check if resultString is not empty
-    text(speech.resultString, 10, 20); // Display the speech result on the canvas
+
+  if (speech.resultString) { 
       
     if (speech.resultString.toLowerCase() == "rain") {
-      ellipse(50, 50, 10, 10)
+      var cardrain = document.getElementById("Rain1");
+      cardrain.style.display = "block";
+      cardrain = document.getElementById("Rain2");
+      cardrain.style.display = "block";
+  
+      var cardleaves = document.getElementById("Leaves1");
+      cardleaves.style.display = "none";
+      cardleaves = document.getElementById("Leaves2");
+      cardleaves.style.display = "none";
+      
+      var cardwelcome = document.getElementById("Welcome1");
+      cardwelcome.style.display = "none";
+      cardwelcome = document.getElementById("Welcome2");
+      cardwelcome.style.display = "none";
     }
+    
+  if (speech.resultString.toLowerCase() == "leaves") {
+      var cardleaves = document.getElementById("Leaves1");
+      cardleaves.style.display = "block";
+      cardleaves = document.getElementById("Leaves2");
+      cardleaves.style.display = "block";
+    
+      var cardrain = document.getElementById("Rain1");
+      cardrain.style.display = "none";
+      cardrain = document.getElementById("Rain2");
+      cardrain.style.display = "none";
+    
+      var cardwelcome = document.getElementById("Welcome1");
+      cardwelcome.style.display = "none";
+      cardwelcome = document.getElementById("Welcome2");
+      cardwelcome.style.display = "none";
+    }
+    
   }
-
 
 }
 
+// Speech recognition test 
 function gotSpeech()
 { 
   console.log(speech.resultString); // log the result
-}
+} 

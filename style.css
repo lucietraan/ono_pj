@@ -1,7 +1,92 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: rgb(245,233,220);
 }
 canvas {
   display: block;
+}
+
+.wrapper {
+  margin: 0px;
+  padding: 0px;
+  background: rgb(245,233,220);
+  max-height: 100vh;
+  border: none; 
+  overflow-x: auto;
+  display: flex;
+}
+
+.wrapper .panel {
+  position: relative;
+  min-width: 500px;
+  height: 100vh;
+  margin-left: 150px; 
+}
+
+.cardwelcome { 
+  margin-top: 50px; 
+  position: relative; 
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100vw; 
+  color: rgb(43, 61, 133);
+  display: block; 
+}
+
+.cardrain {
+  margin-top: 50px; 
+  position: relative; 
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100vw; 
+  color: rgb(43, 61, 133);
+  display: none;
+}
+
+.cardleaves {
+  margin-top: 50px; 
+  position: relative; 
+  font-family: "Source Serif 4", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  width: 100vw; 
+  color: rgb(43, 61, 133);
+  display: none;
+}
+
+.alltext { 
+  margin-left: 70px; 
+}
+
+.title { 
+  font-size: 50px; 
+  margin-top: 200px; 
+}
+
+.english { 
+  font-size: 35px; 
+}
+
+.subtitle { 
+  line-height: 2; 
+}
+
+.words  {
+  line-height: 2; 
+  margin-top: -192px; 
+  margin-left: 160px; 
+  width: 100px; 
+  text-align: left; 
+}
+
+.nouns { 
+  color: black; 
+  margin-top: 200px; 
+  line-height: 2; 
 }

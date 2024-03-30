@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;1,8..60,300&display=swap"
-      rel="stylesheet"
-    />
+
+    <!-- GOOGLE FONT LINKS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">            
 
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
@@ -18,111 +18,409 @@
     
   </head>
   <body>
-    
-    <div class = "wrapper"> 
-      
-      <div class = "panel">
-        
-        <div class="cardrain" id="Rain1">
-          <img src="https://i.imgur.com/V5Fq9Gn.png"
-              alt="rain"
-              width="700px" />
-        </div> 
-        
-        <div class="cardleaves" id="Leaves1"> 
-          <img src="https://i.imgur.com/kCr4EJd.png"
-              alt="leaves"
-              width="700px" />
-        </div> 
-        
-        <div class="cardwelcome" id="Welcome1"> 
-          <h2 class = "title"> Onomatopoeia <br> Project </h2> 
-          <h3 class = "english"> 
-            Say one of the <br> following nouns
-          </h3> 
-        </div> 
-        
-      </div>
-      
+
+    <div class = "containerwelcome" id = "welcomePage"> 
       <div class = "panel"> 
-        
-        <div class = "cardwelcome" id = "Welcome2"> 
-          <div class = "alltext"> 
-            <div class = "nouns">
-              Leaves <br> 
-              Trees <br> 
-              Mud <br> 
-              Earthquake <br> 
-              Avalanche <br> 
-              Camp Fire <br> 
-              Explosion <br> 
-              Volcano <br> 
-              Lightning <br> 
-              Matches <br> 
-              Rain <br> 
-            </div> 
-            
-          </div> 
-        </div> 
-        
-        <div class = "cardrain" id = "Rain2"> 
-          <div class = "alltext"> 
-            <h2 class = "title"> 
-               Rain  
-            </h2> 
-            <h3 class = "english"> 
-              Drip drop 
-            </h3> 
-            <div class = "subtitle">
-              Chinese <br> 
-              French <br> 
-              Korean <br> 
-              Vietnamese <br> 
-              Japanese <br> 
-              Spanish <br> 
-            </div> 
-            <div class = "words"> 
-              滴滴啦啦 <br />
-              Flic floc <br />
-              톡톡 <br />
-              Lộp độp <br />
-              ぼたぼた <br />
-              Gotear <br />
-            </div> 
-            
-          </div> 
-        </div> 
-        
-        <div class = "cardleaves" id="Leaves2"> 
-          <div class = "alltext"> 
-            <h2 class = "title"> 
-               Leaves
-            </h2> 
-            <h3 class = "english"> 
-              Rustle 
-            </h3> 
-            <div class = "subtitle">
-              Chinese <br> 
-              French <br> 
-              Korean <br> 
-              Vietnamese <br> 
-              Japanese <br> 
-              Spanish <br> 
-            </div> 
-            <div class = "words"> 
-              沙沙 <br />
-              Ffrr ffrr  <br />
-              사각사각 <br />
-              Rì rào <br />
-              サラサラ <br />
-              Fru fru  <br />
-            </div> 
-            
-          </div> 
-        </div> 
-      
-      </div>  
+        <div class = "head1"> 
+          Onomatopoeia <br> Project 
+        </div>
+        <div class = "welcomesubtitle"> 
+          Though usually neglected in language education and vocabularies, onomatopoeias are super fun, expressive, and interesting. That’s why we made The Onomatopoeia Project, a language educational tool specialized in the vocabulary that represents sounds! <br> 
+          In this website, you can explore them by speaking one of the words listed below, and The Onomatopoeia Project will translate nouns into the exact onomatopoeias that you need to different languages. <br> 
+          (Say "home" to navigate back to this page!) 
+        </div>
+        <div class = "contributors-head"> 
+          Contributors 
+        </div>
+        <div class = "contributors-sub">
+          🦄 Lucie Tran / CS&P / SP24 <br> 
+          ❄️ Instructors / Susie Fu & Anca Mosoiu 
+        </div>
+        <div class = "translators1"> 
+          🌈 English / Dừa <br> 
+          🌸 Vietnamese / Bì & Dừa <br> 
+          🐼 Chinese / Queen <br> 
+          🐈 French / Hiếu Trần & Bì <br> 
+        </div>
+        <div class = "translators2"> 
+          🌼 Korean / Chin <br> 
+          🌙 Japanese / Bu <br> 
+          🥑 Spanish / Andrea <br> 
+        </div>
+      </div>
+      <div class = "panel onright"> 
+        <div class = "earth"> 
+          Leaves <br> 
+          Trees <br> 
+          Mud <br> 
+          Earthquake <br> 
+          Avalanche <br> 
+        </div>
+        <div class = "water"> 
+          Rain <br> 
+          Ice <br> 
+          Ocean <br> 
+          Water Fall <br> 
+          Tsunami <br> 
+        </div>
+        <div class = "human"> 
+          Heartbeat <br> 
+          Laughter <br> 
+          Pain <br> 
+          Sadness <br> 
+          Amazement <br> 
+        </div>
+        <div class = "fire"> 
+          Camp Fire <br> 
+          Explosion <br> 
+          Volcano <br> 
+          Lightning <br> 
+          Matches <br> 
+        </div>
+        <div class = "wind"> 
+          Breeze <br> 
+          Tornado <br> 
+          Storm <br> 
+          Blow <br> 
+          Breath <br> 
+        </div>
+      </div>
+    </div>
     
+    <!-- EARTH ELEMENTS -->
+
+    <div class = "containerleaves" id = "leavesPage"> 
+      <div class = "nouns"> Leaves </div>
+      <div class = "translation"> 
+      English: Rustle <br> 
+      Chinese: 沙沙 <br> 
+      Vietnamese: Rì rào <br> 
+      French: Ffrr ffrr <br> 
+      Korean: 사각사각 <br> 
+      Japanese: サラサラ <br> 
+      Spanish: Fru fru <br> 
+      </div> 
+    </div>
+
+    <div class = "containertrees" id = "treesPage"> 
+      <div class = "nouns"> Trees </div>
+      <div class = "translation"> 
+      English: Whisper <br> 
+      Chinese: 飒飒 <br> 
+      Vietnamese: Rì rầm <br> 
+      French: Sususu <br> 
+      Korean: 소근소근 <br> 
+      Japanese: サワサワ <br> 
+      Spanish: Susurro <br> 
+      </div> 
+    </div>
+
+    <div class = "containermud" id = "mudPage"> 
+      <div class = "nouns"> Mud </div>
+      <div class = "translation"> 
+      English: Burble <br> 
+      Chinese: 咕噜咕噜 <br> 
+      Vietnamese: Bõm <br> 
+      French: Plop / Plouf <br> 
+      Korean: 첨벙 <br> 
+      Japanese: ぽちゃぽちゃ <br> 
+      Spanish: Gargajo <br> 
+      </div> 
+    </div>
+
+    <div class = "containerearthquake" id = "earthquakePage"> 
+      <div class = "nouns"> Earthquake </div>
+      <div class = "translation"> 
+      English: Crash <br> 
+      Chinese: 隆隆 <br> 
+      Vietnamese: Rầm <br> 
+      French: Bam <br> 
+      Korean: 쾅 <br> 
+      Japanese: ガチャン <br> 
+      Spanish: Atropellar <br> 
+      </div> 
+    </div>
+
+    <div class = "containeravalanche" id = "avalanchePage"> 
+      <div class = "nouns"> Avalanche </div>
+      <div class = "translation"> 
+      English: Roar <br> 
+      Chinese: 轰 / 呼拉 <br> 
+      Vietnamese: Gào <br> 
+      French: Broom / Woum <br> 
+      Korean: 와르르 <br> 
+      Japanese: ぎゃあぎゃあ <br> 
+      Spanish: Rujir <br> 
+      </div> 
+    </div>
+
+    <!-- FIRE ELEMENTS -->
+
+    <div class = "containercampfire" id = "campfirePage"> 
+      <div class = "nouns"> Camp Fire </div>
+      <div class = "translation"> 
+      English: Crackle <br> 
+      Chinese: 滋啦滋啦 <br> 
+      Vietnamese: Lách tách <br> 
+      French: Crépitement <br> 
+      Korean: 우지직 <br> 
+      Japanese: パチパチ <br> 
+      Spanish: Crujir <br> 
+      </div> 
+    </div>
+
+    <div class = "containerexplosion" id = "explosionPage"> 
+      <div class = "nouns"> Explosion </div>
+      <div class = "translation"> 
+      English: Boom <br> 
+      Chinese: 噼里啪啦 <br> 
+      Vietnamese: Bùm <br> 
+      French: Boum <br> 
+      Korean: 뻥 / 펑 <br> 
+      Japanese: どっかーん <br> 
+      Spanish: Bum <br> 
+      </div> 
+    </div>
+
+    <div class = "containervolcano" id = "volcanoPage"> 
+      <div class = "nouns"> Volcano </div>
+      <div class = "translation"> 
+      English: Grumble <br> 
+      Chinese: 轰隆隆 <br> 
+      Vietnamese: Rầm rầm <br> 
+      French: Ramdam <br> 
+      Korean: 화르륵 <br> 
+      Japanese: ゴガア <br> 
+      Spanish: Refunfuño <br> 
+      </div> 
+    </div>
+
+    <div class = "containerlightning" id = "lightningPage"> 
+      <div class = "nouns"> Lightning </div>
+      <div class = "translation"> 
+      English: Slash <br> 
+      Chinese: 霍嚓 <br> 
+      Vietnamese: Đùng đùng <br> 
+      French: Roum Roum / Baoumbadaboum <br> 
+      Korean: 덩덩 <br> 
+      Japanese: ドーン <br> 
+      Spanish: Cuchillar <br> 
+      </div> 
+    </div>
+
+    <div class = "containermatches" id = "matchesPage"> 
+      <div class = "nouns"> Matches </div>
+      <div class = "translation"> 
+      English: Splutter <br> 
+      Chinese: 嚓 <br> 
+      Vietnamese: Phừng <br> 
+      French: Frr <br> 
+      Korean: 화르륵 <br> 
+      Japanese: パット <br> 
+      Spanish: Salpicar <br> 
+      </div> 
+    </div>
+
+    <!-- WATER ELEMENTS -->
+
+    <div class = "containerrain" id = "rainPage"> 
+      <div class = "nouns"> Rain </div>
+      <div class = "translation"> 
+      English: Drip <br> 
+      Chinese: 滴滴啦啦 <br> 
+      Vietnamese: Lộp độp <br> 
+      French: Flic floc <br> 
+      Korean: 톡톡 <br> 
+      Japanese: ぼたぼた <br> 
+      Spanish: Gotear <br> 
+      </div> 
+    </div>
+
+    <div class = "containerice" id = "icePage"> 
+      <div class = "nouns"> Ice </div>
+      <div class = "translation"> 
+      English: Crack <br> 
+      Chinese: 嗤嗤 <br> 
+      Vietnamese: Rắc <br> 
+      French: Crac / Craque <br> 
+      Korean: 우두득 <br> 
+      Japanese: バキッ <br> 
+      Spanish: Crujir <br> 
+      </div> 
+    </div>
+
+    <div class = "containerocean" id = "oceanPage"> 
+      <div class = "nouns"> Ocean </div>
+      <div class = "translation"> 
+      English: Roar <br> 
+      Chinese: 哗哗 <br> 
+      Vietnamese: Ì oạp <br> 
+      French: Splatch <br> 
+      Korean: 솨아 <br> 
+      Japanese: ジャ <br> 
+      Spanish: Rujir <br> 
+      </div> 
+    </div>
+
+    <div class = "containerwaterfall" id = "waterfallPage"> 
+      <div class = "nouns"> Water Fall </div>
+      <div class = "translation"> 
+      English: Splash <br> 
+      Chinese: 隆隆 <br> 
+      Vietnamese: Ì ầm <br> 
+      French: Broum-broum <br> 
+      Korean: 추록추록 <br> 
+      Japanese: ピチャン <br> 
+      Spanish: Chapoteo <br> 
+      </div> 
+    </div>
+
+    <div class = "containertsunami" id = "tsunamiPage"> 
+      <div class = "nouns"> Tsunami </div>
+      <div class = "translation"> 
+      English: Slam <br> 
+      Chinese: 哗啦 / 哗哗 / 啪啪 <br> 
+      Vietnamese: Ầm ầm <br> 
+      French: Brrou brrou <br> 
+      Korean: 와르르 <br> 
+      Japanese: ザッパーン <br> 
+      Spanish: Golpe <br> 
+      </div> 
+    </div>
+
+    <!-- WIND ELEMENTS -->
+
+    <div class = "containerbreeze" id = "breezePage"> 
+      <div class = "nouns"> Breeze </div>
+      <div class = "translation"> 
+      English: Swish <br> 
+      Chinese: 淅淅 <br> 
+      Vietnamese: Vút <br> 
+      French: Fuit <br> 
+      Korean: 휙 <br> 
+      Japanese: ヒューヒュー <br> 
+      Spanish: Remolino <br> 
+      </div> 
+    </div>
+
+    <div class = "containertornado" id = "tornadoPage"> 
+      <div class = "nouns"> Tornado </div>
+      <div class = "translation"> 
+      English: Blast <br> 
+      Chinese: 呼呼 <br> 
+      Vietnamese: Đùng đoàng <br> 
+      French: Doum-doum <br> 
+      Korean: 펑 <br> 
+      Japanese: ゴォォー <br> 
+      Spanish: Disparar <br> 
+      </div> 
+    </div>
+
+    <div class = "containerstorm" id = "stormPage"> 
+      <div class = "nouns"> Storm </div>
+      <div class = "translation"> 
+      English: Crush <br> 
+      Chinese: 嗖嗖 <br> 
+      Vietnamese: Rầm rầm <br> 
+      French: Vouh / Flic floc <br> 
+      Korean: 쾅쾅 <br> 
+      Japanese: ビシャビシャ <br> 
+      Spanish: Aplastar <br> 
+      </div> 
+    </div>
+
+    <div class = "containerblow" id = "blowPage"> 
+      <div class = "nouns"> Blow </div>
+      <div class = "translation"> 
+      English: Whoosh <br> 
+      Chinese: 呜呜 <br> 
+      Vietnamese: Vù vù <br> 
+      French: Vouh / Wouuuh <br> 
+      Korean: 휭휭 <br> 
+      Japanese: パタパタ <br> 
+      Spanish: Susurro <br> 
+      </div> 
+    </div>
+
+    <div class = "containerbreath" id = "breathPage"> 
+      <div class = "nouns"> Breath </div>
+      <div class = "translation"> 
+      English: Huff <br> 
+      Chinese: 呼呼 / 哧哧 <br> 
+      Vietnamese: Phù <br> 
+      French: Fou <br> 
+      Korean: 푸 <br> 
+      Japanese: フ－ <br> 
+      Spanish: Suspiro <br> 
+      </div> 
+    </div>
+
+    <!-- HUMAN ELEMENTS -->
+
+    <div class = "containerheartbeat" id = "heartbeatPage"> 
+      <div class = "nouns"> Heartbeat </div>
+      <div class = "translation"> 
+      English: Ba-thump <br> 
+      Chinese: 怦怦 <br> 
+      Vietnamese: Thình thịch <br> 
+      French: Tac tac / Boum-boum <br> 
+      Korean: 두근 <br> 
+      Japanese: ドキドキ <br> 
+      Spanish: Tum tum <br> 
+      </div> 
+    </div>
+
+    <div class = "containerlaughter" id = "laughterPage"> 
+      <div class = "nouns"> Laughter </div>
+      <div class = "translation"> 
+      English: Hehe <br> 
+      Chinese: 哈哈 <br> 
+      Vietnamese: Há há <br> 
+      French: Haha <br> 
+      Korean: 하하/헤헤 <br> 
+      Japanese: ハハハ <br> 
+      Spanish: Jaja <br> 
+      </div> 
+    </div>
+
+    <div class = "containerpain" id = "painPage"> 
+      <div class = "nouns"> Pain </div>
+      <div class = "translation"> 
+      English: Ouch <br> 
+      Chinese: 哎呦 <br> 
+      Vietnamese: Ối <br> 
+      French: Aie <br> 
+      Korean: 아야 <br> 
+      Japanese: イタイ <br> 
+      Spanish: Au <br> 
+      </div> 
+    </div>
+
+    <div class = "containersadness" id = "sadnessPage"> 
+      <div class = "nouns"> Sadness </div>
+      <div class = "translation"> 
+      English: Sob <br> 
+      Chinese: 呜呜 <br> 
+      Vietnamese: Hức <br> 
+      French: Ouin ouin <br> 
+      Korean: 힝힝/엉엉/흑흑 <br> 
+      Japanese: ヒリヒリ <br> 
+      Spanish: Llanto <br> 
+      </div> 
+    </div>
+
+    <div class = "containeramazement" id = "amazementPage"> 
+      <div class = "nouns"> Amazement </div>
+      <div class = "translation"> 
+      English: Wow <br> 
+      Chinese: 嘿嘿 / 哇 <br> 
+      Vietnamese: Oa <br> 
+      French: Oh là là / Waow <br> 
+      Korean: 와 <br> 
+      Japanese: ワ <br> 
+      Spanish: Guau <br> 
+      </div> 
+    </div>
   </body> 
       
 </html>

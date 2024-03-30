@@ -1,92 +1,446 @@
-html, body {
-  margin: 0;
+html { 
   padding: 0;
-  background-color: rgb(245,233,220);
-}
-canvas {
-  display: block;
+  margin: 0;
+  background: #F8F8F8;
 }
 
-.wrapper {
-  margin: 0px;
-  padding: 0px;
-  background: rgb(245,233,220);
-  max-height: 100vh;
-  border: none; 
-  overflow-x: auto;
-  display: flex;
-}
-
-.wrapper .panel {
-  position: relative;
-  min-width: 500px;
+.containerwelcome { 
+  width: 90vw; 
   height: 100vh;
-  margin-left: 150px; 
+  background: #F8F8F8;
+  padding-left: 120px;
+  overflow-x: auto;
+
+  /* TO TEST, SHOULD BE DISPLAY FLEX IN FINAL VERSION */
+  display: flex;
+
+  max-height: 100vh;
+  max-width: 100vw;
+  border: none;
 }
 
-.cardwelcome { 
-  margin-top: 50px; 
-  position: relative; 
-  font-family: "Source Serif 4", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+.containerwelcome .panel { 
+  width: 45vw; 
+  height: 100vh; 
+  position: relative;
+}
+
+
+  /* ĐỐNG Ở BÊN TRÁI WELCOME PAGE */
+
+.head1 { 
+  width: 595px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 60px;
   font-style: normal;
-  width: 100vw; 
-  color: rgb(43, 61, 133);
-  display: block; 
+  font-weight: 400;
+  line-height: 60px; /* 133.333% */
+  padding-top: 120px;
+  padding-bottom: 50px;
 }
 
-.cardrain {
-  margin-top: 50px; 
-  position: relative; 
-  font-family: "Source Serif 4", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+.welcomesubtitle { 
+  width: 600px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 16px;
   font-style: normal;
-  width: 100vw; 
-  color: rgb(43, 61, 133);
-  display: none;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+  padding-bottom: 30px;
 }
 
-.cardleaves {
-  margin-top: 50px; 
-  position: relative; 
-  font-family: "Source Serif 4", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
+.contributors-head { 
+  width: 595px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 28px;
   font-style: normal;
-  width: 100vw; 
-  color: rgb(43, 61, 133);
-  display: none;
+  font-weight: 400;
+  line-height: 25px; /* 78.125% */
+  padding-bottom: 15px; 
 }
 
-.alltext { 
-  margin-left: 70px; 
+.contributors-sub { 
+  width: 595px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  padding-bottom: 10px;
 }
 
-.title { 
-  font-size: 50px; 
-  margin-top: 200px; 
+.translators1 { 
+  width: 239px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
 }
 
-.english { 
-  font-size: 35px; 
+.translators2 { 
+  width: 239px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 125% */
+  padding-left: 250px;
+  margin-top: -100px;
 }
 
-.subtitle { 
-  line-height: 2; 
+  /* ĐỐNG Ở BÊN PHẢI WELCOME  */
+.onright { 
+  padding-left: 200px;
 }
 
-.words  {
-  line-height: 2; 
-  margin-top: -192px; 
-  margin-left: 160px; 
-  width: 100px; 
-  text-align: left; 
+.earth { 
+  width: 240px;
+  color: #5CA44B;
+  font-family: "Space Grotesk";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 107.5% */
+  padding-top: 130px;
+  padding-bottom: 20px;
+}
+
+.water { 
+  width: 215px;
+  color: #38A8CC;
+  font-family: "Space Grotesk";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 107.5% */   
+  padding-bottom: 20px;
+}
+
+.human { 
+  width: 215px;
+  color: #E7A68A;
+  font-family: "Space Grotesk";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 118.75% */
+  padding-bottom: 20px;
+}
+
+.fire { 
+  width: 200px;
+  color: #CA3636;
+  font-family: "Space Grotesk";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 107.5% */
+  padding-left: 300px;
+  padding-bottom: 20px;
+  margin-top: -500px;
+}
+
+.wind { 
+  width: 200px;
+  color: #808080;
+  font-family: "Space Grotesk";
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 107.5% */
+  padding-left: 300px;
 }
 
 .nouns { 
-  color: black; 
-  margin-top: 200px; 
-  line-height: 2; 
+  width: 300px;
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px; /* 62.5% */
+  padding-bottom: 50px;
+  padding-top: 30vh;
+  padding-left: 120px;
 }
+
+.translation { 
+  color: #000;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 125% */
+  padding-left: 120px;
+}
+
+/* EARTH ELEMENTS */
+
+.containerleaves { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/leaves.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containertrees { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/trees.png); 
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containermud { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/mud.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerearthquake { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/earthquake.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containeravalanche { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/avalanche.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+/* FIRE ELEMENTS */
+
+.containercampfire { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/campfire.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerexplosion { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/explosion.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containervolcano { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/volcano.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerlightning { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/lightning.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containermatches { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/matches.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+/* WATER ELEMENTS */
+
+.containerrain { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/rain.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerice { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/ice.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerocean { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/ocean.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerwaterfall { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/waterfall.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containertsunami { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/tsunami.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+/* WIND ELEMENTS */
+
+.containerbreeze { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/breeze.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containertornado { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/tornado.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerstorm { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/storm.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerblow { 
+  width: 100vw; 
+  height: 100vh;
+  /* background-image: url(); NEEDS UPDATE */ 
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerbreath { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/breath.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+/* HUMAN ELEMENTS */
+
+.containerheartbeat { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/heartbeat.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerlaughter { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/laughter.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containerpain { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/pain.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containersadness { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/sadness.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+.containeramazement { 
+  width: 100vw; 
+  height: 100vh;
+  background-image: url(imgs/amazement.png);
+  background-size: 100vw 100vh;
+  background-position: right top; 
+  position: relative; 
+  display: none; 
+}
+
+
+
+

@@ -4,7 +4,13 @@ html {
   background: #F8F8F8;
 }
 
+body {
+  margin:0;
+  padding:0;
+}
+
 .containerwelcome { 
+  font-family: "Space Grotesk";
   width: 90vw; 
   height: 100vh;
   background: #F8F8F8;
@@ -17,6 +23,7 @@ html {
   max-height: 100vh;
   max-width: 100vw;
   border: none;
+  /* padding: 0;  */
 }
 
 .containerwelcome .panel { 
@@ -25,17 +32,13 @@ html {
   position: relative;
 }
 
-
-  /* ĐỐNG Ở BÊN TRÁI WELCOME PAGE */
-
 .head1 { 
   width: 595px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 60px;
   font-style: normal;
   font-weight: 400;
-  line-height: 60px; /* 133.333% */
+  line-height: 60px;
   padding-top: 120px;
   padding-bottom: 50px;
 }
@@ -43,29 +46,26 @@ html {
 .welcomesubtitle { 
   width: 600px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; /* 125% */
+  line-height: 25px;
   padding-bottom: 30px;
 }
 
 .contributors-head { 
   width: 595px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 28px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; /* 78.125% */
+  line-height: 25px;
   padding-bottom: 15px; 
 }
 
 .contributors-sub { 
   width: 595px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -76,21 +76,19 @@ html {
 .translators1 { 
   width: 239px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; /* 125% */
+  line-height: 25px;
 }
 
 .translators2 { 
   width: 239px;
   color: #000;
-  font-family: "Space Grotesk";
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px; /* 125% */
+  line-height: 25px;
   padding-left: 250px;
   margin-top: -100px;
 }
@@ -103,7 +101,6 @@ html {
 .earth { 
   width: 240px;
   color: #5CA44B;
-  font-family: "Space Grotesk";
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -115,7 +112,6 @@ html {
 .water { 
   width: 215px;
   color: #38A8CC;
-  font-family: "Space Grotesk";
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -126,7 +122,6 @@ html {
 .human { 
   width: 215px;
   color: #E7A68A;
-  font-family: "Space Grotesk";
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -137,7 +132,6 @@ html {
 .fire { 
   width: 200px;
   color: #CA3636;
-  font-family: "Space Grotesk";
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -150,7 +144,6 @@ html {
 .wind { 
   width: 200px;
   color: #808080;
-  font-family: "Space Grotesk";
   font-size: 23px;
   font-style: normal;
   font-weight: 400;
@@ -181,266 +174,14 @@ html {
   padding-left: 120px;
 }
 
-/* EARTH ELEMENTS */
 
-.containerleaves { 
+.container >div { 
   width: 100vw; 
   height: 100vh;
-  background-image: url(imgs/leaves.png);
   background-size: 100vw 100vh;
   background-position: right top; 
   position: relative; 
   display: none; 
+  padding: 0px;
+  margin: 0px;
 }
-
-.containertrees { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/trees.png); 
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containermud { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/mud.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerearthquake { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/earthquake.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containeravalanche { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/avalanche.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-/* FIRE ELEMENTS */
-
-.containercampfire { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/campfire.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerexplosion { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/explosion.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containervolcano { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/volcano.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerlightning { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/lightning.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containermatches { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/matches.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-/* WATER ELEMENTS */
-
-.containerrain { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/rain.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerice { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/ice.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerocean { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/ocean.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerwaterfall { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/waterfall.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containertsunami { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/tsunami.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-/* WIND ELEMENTS */
-
-.containerbreeze { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/breeze.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containertornado { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/tornado.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerstorm { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/storm.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerblow { 
-  width: 100vw; 
-  height: 100vh;
-  /* background-image: url(); NEEDS UPDATE */ 
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerbreath { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/breath.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-/* HUMAN ELEMENTS */
-
-.containerheartbeat { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/heartbeat.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerlaughter { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/laughter.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containerpain { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/pain.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containersadness { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/sadness.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-.containeramazement { 
-  width: 100vw; 
-  height: 100vh;
-  background-image: url(imgs/amazement.png);
-  background-size: 100vw 100vh;
-  background-position: right top; 
-  position: relative; 
-  display: none; 
-}
-
-
-
-

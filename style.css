@@ -16,14 +16,12 @@ body {
   background: #F8F8F8;
   padding-left: 120px;
   overflow-x: auto;
-
-  /* TO TEST, SHOULD BE DISPLAY FLEX IN FINAL VERSION */
   display: flex;
 
   max-height: 100vh;
   max-width: 100vw;
   border: none;
-  /* padding: 0;  */
+
 }
 
 .containerwelcome .panel { 
@@ -50,7 +48,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 25px;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .contributors-head { 
@@ -91,6 +89,42 @@ body {
   line-height: 25px;
   padding-left: 250px;
   margin-top: -100px;
+}
+
+.startbutton { 
+  width: 190px;
+  height: 40px;
+  border: solid black 1px; 
+  border-radius: 25px;
+  text-align: center;
+  transition: .2s ;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #F8F8F8;
+  margin-bottom: 4vh; 
+}
+
+.startbutton:hover { 
+  border: 1px solid #5CA44B;
+  color: #7EC6CC; 
+}
+
+.clicked {
+  width: 190px;
+  height: 40px;
+  border-radius: 25px;
+  text-align: center;
+  transition: .2s ;
+  font-family: "Space Grotesk";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #F8F8F8;
+  border: 1px solid #5CA44B;
+  color: #7EC6CC; 
+  margin-bottom: 4vh; 
 }
 
   /* ĐỐNG Ở BÊN PHẢI WELCOME  */

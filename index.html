@@ -29,6 +29,7 @@
           In this website, you can explore them by speaking one of the words listed below, and The Onomatopoeia Project will translate nouns into the exact onomatopoeias that you need to different languages. <br> 
           (Say "home" to navigate back to this page!) 
         </div>
+        <button type="button" class = "startbutton" id = "startbutton">Click to start!</button>
         <div class = "contributors-head"> 
           Contributors 
         </div>
@@ -47,6 +48,7 @@
           🌙 Japanese / Bu <br> 
           🥑 Spanish / Andrea <br> 
         </div>
+        
       </div>
       <div class = "panel onright"> 
         <div class = "earth"> 
@@ -92,6 +94,15 @@
     <div class="container">
 
     </div>
+
+    <script>
+      // Add event listener to the button
+      document.getElementById("startbutton").addEventListener("click", function() {
+        this.textContent = "Now, say a word!";
+        this.classList.add("clicked");
+        this.classList.remove("startbutton");
+      });
+    </script>
 
   </body> 
       

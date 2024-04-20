@@ -87,49 +87,54 @@ function setup() {
   speech.continuous = true;
   speech.start();
 
-  
- 
-
 }
 
 function draw() {
 
 }
 
-function checkSpeech() { 
 
-  if (speech.resultString) { 
-    var input = speech.resultString.toLowerCase(); 
+function checkSpeech() {
+  if (speech.resultString) {
+    var input = speech.resultString.toLowerCase();
+    var isHome = input.includes("home");
 
-    if (input in transformedData) {
-      if (currentsound) {
-        currentsound.stop();
-      }
+    // var pagechanged = false; 
 
-      for (var page in pages) {
-        if (pages.hasOwnProperty(page)) {
-          pages[page].style.display = "none";
-        }
-      }
+    for (var noun in transformedData) {
+      if (transformedData.hasOwnProperty(noun)) {
+        if (input.includes(noun.toLowerCase())) {
+          if (currentsound) {
+            currentsound.stop();
+          }
 
-      pages[input].style.display = "block";
-
-      if (input !== "home") { 
-        // pages["home"].style.display = "none"; 
-        currentsound = transformedData[input].loadedsound; 
-        if (currentsound) { 
-          currentsound.play(); 
-        }
+          for (var page in pages) {
+            if (pages.hasOwnProperty(page)) {
+              pages[page].style.display = "none";
+            }
+          }
           
-      } else {
-        
-        pages["home"].style.display = "flex";
+          pages[noun].style.display = isHome ? "flex" : "block";
+          currentsound = transformedData[noun].loadedsound;
+          if (currentsound) {
+            currentsound.play();
+          }
+          return; 
+        }
       }
-      
+    }
+
+
+
+
+    for (var page in pages) {
+      if (pages.hasOwnProperty(page)) {
+        pages[page].style.display = "none";
       }
+    }
+    pages["home"].style.display = "flex";
   }
 }
-
 
 
 function setupPages() {

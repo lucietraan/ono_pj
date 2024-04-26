@@ -109,6 +109,7 @@ body {
 .startbutton:hover { 
   border: 1px solid #5CA44B;
   color: #7EC6CC; 
+  transition: .2s ;
 }
 
 .clicked {
@@ -172,12 +173,23 @@ body {
   line-height: 35px; /* 107.5% */
   padding-left: 300px;
   padding-bottom: 20px;
-  margin-top: -500px;
+  margin-top: -583px;
 }
 
 .wind { 
   width: 200px;
   color: #808080;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px; /* 107.5% */
+  padding-left: 300px;
+  padding-bottom: 20px;
+}
+
+.animals { 
+  width: 200px;
+  color: #a796ff;
   font-size: 23px;
   font-style: normal;
   font-weight: 400;

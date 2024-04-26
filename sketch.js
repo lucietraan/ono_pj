@@ -24,7 +24,7 @@ function preload() {
     return response.json();
   })
   .then(function(d) {
-    //console.log(d);
+    
     data_googlesheet = d;
 
     if (data_googlesheet) {
@@ -93,13 +93,24 @@ function draw() {
 
 }
 
-
 function checkSpeech() {
+
+  //add timer to go back home 
+  
   if (speech.resultString) {
     var input = speech.resultString.toLowerCase();
     var isHome = input.includes("home");
 
-    // var pagechanged = false; 
+    
+    if (isHome) {
+      for (var page in pages) {
+        if (pages.hasOwnProperty(page)) {
+          pages[page].style.display = "none";
+        }
+      }
+      pages["home"].style.display = "flex";
+      return;
+    }
 
     for (var noun in transformedData) {
       if (transformedData.hasOwnProperty(noun)) {
@@ -114,7 +125,8 @@ function checkSpeech() {
             }
           }
           
-          pages[noun].style.display = isHome ? "flex" : "block";
+
+          pages[noun].style.display = "block";
           currentsound = transformedData[noun].loadedsound;
           if (currentsound) {
             currentsound.play();
@@ -124,17 +136,50 @@ function checkSpeech() {
       }
     }
 
-
-
-
-    for (var page in pages) {
-      if (pages.hasOwnProperty(page)) {
-        pages[page].style.display = "none";
-      }
-    }
-    pages["home"].style.display = "flex";
   }
 }
+
+
+// function checkSpeech() {
+//   if (speech.resultString) {
+//     var input = speech.resultString.toLowerCase();
+//     var isHome = input.includes("home");
+
+
+
+//     for (var noun in transformedData) {
+//       if (transformedData.hasOwnProperty(noun)) {
+//         if (input.includes(noun.toLowerCase())) {
+//           if (currentsound) {
+//             currentsound.stop();
+//           }
+
+//           for (var page in pages) {
+//             if (pages.hasOwnProperty(page)) {
+//               pages[page].style.display = "none";
+//             }
+//           }
+          
+//           pages[noun].style.display = isHome ? "flex" : "block";
+//           currentsound = transformedData[noun].loadedsound;
+//           if (currentsound) {
+//             currentsound.play();
+//           }
+//           return; 
+//         }
+        
+//         for (var page in pages) {
+//           if (pages.hasOwnProperty(page)) {
+//             pages[page].style.display = "none";
+//           }
+//         }
+    
+//         pages["home"].style.display = "flex";
+//       }
+//     }
+
+//   }
+// }
 
 
 function setupPages() {

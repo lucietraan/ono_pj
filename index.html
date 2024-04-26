@@ -26,7 +26,7 @@
         </div>
         <div class = "welcomesubtitle"> 
           Though usually neglected in language education and vocabularies, onomatopoeias are super fun, expressive, and interesting. That’s why we made The Onomatopoeia Project, a language educational tool specialized in the vocabulary that represents sounds! <br> 
-          In this website, you can explore them by speaking one of the words listed below, and The Onomatopoeia Project will translate nouns into the exact onomatopoeias that you need to different languages. <br> 
+          In this website, you can explore them by speaking one of the words listed on the right, and The Onomatopoeia Project will translate nouns into the exact onomatopoeias that you need to different languages. <br> 
           (Say "home" to navigate back to this page!) 
         </div>
         <button type="button" class = "startbutton" id = "startbutton">Click to start!</button>
@@ -86,6 +86,13 @@
           Blow <br> 
           Breath <br> 
         </div>
+        <div class = "animals">
+          Snakes <br> 
+          Cats <br> 
+          Dogs <br> 
+          Cicadas <br> 
+          Ducks <br> 
+        </div>
       </div>
     </div>
     
@@ -98,7 +105,7 @@
     <script>
       // Add event listener to the button
       document.getElementById("startbutton").addEventListener("click", function() {
-        this.textContent = "Now, say a word!";
+        this.textContent = "Now, say a noun!";
         this.classList.add("clicked");
         this.classList.remove("startbutton");
       });

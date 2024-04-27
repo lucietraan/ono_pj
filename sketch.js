@@ -6,11 +6,6 @@ var pages = {};
 var translations
 var languages = ['English', 'Chinese', 'Vietnamese', 'French', 'Korean', 'Japanese', 'Spanish']
 
-// NEEDS TO CLICK ON THE WEBSITE TO RUN SOUND
-// Consider adding landing page with a button :') 
-// consider detecting sounds that's not words  
-// user can ask a full sentense and it spits out the words
-
 
 function preload() {
   soundFormats('wav', 'mp3');
@@ -95,7 +90,6 @@ function draw() {
 
 function checkSpeech() {
 
-  //add timer to go back home 
   
   if (speech.resultString) {
     var input = speech.resultString.toLowerCase();
@@ -103,6 +97,11 @@ function checkSpeech() {
 
     
     if (isHome) {
+
+      if (currentsound) {
+        currentsound.stop();
+      }
+
       for (var page in pages) {
         if (pages.hasOwnProperty(page)) {
           pages[page].style.display = "none";
@@ -139,47 +138,6 @@ function checkSpeech() {
   }
 }
 
-
-// function checkSpeech() {
-//   if (speech.resultString) {
-//     var input = speech.resultString.toLowerCase();
-//     var isHome = input.includes("home");
-
-
-
-//     for (var noun in transformedData) {
-//       if (transformedData.hasOwnProperty(noun)) {
-//         if (input.includes(noun.toLowerCase())) {
-//           if (currentsound) {
-//             currentsound.stop();
-//           }
-
-//           for (var page in pages) {
-//             if (pages.hasOwnProperty(page)) {
-//               pages[page].style.display = "none";
-//             }
-//           }
-          
-//           pages[noun].style.display = isHome ? "flex" : "block";
-//           currentsound = transformedData[noun].loadedsound;
-//           if (currentsound) {
-//             currentsound.play();
-//           }
-//           return; 
-//         }
-        
-//         for (var page in pages) {
-//           if (pages.hasOwnProperty(page)) {
-//             pages[page].style.display = "none";
-//           }
-//         }
-    
-//         pages["home"].style.display = "flex";
-//       }
-//     }
-
-//   }
-// }
 
 
 function setupPages() {
